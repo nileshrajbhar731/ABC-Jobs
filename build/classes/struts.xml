@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+
+	<package name="default" extends="struts-default" >
+
+       <action name="myregister" class="com.lithan.ABCJOB.Action.RegisterAction">
+			<result name="SUCCESS">/ThankYpuPage.jsp</result>
+			<result name="INPUT">/RegistraionPage.jsp</result>
+			
+		</action>
+		
+		<action name="mylogin" class="com.lithan.ABCJOB.Action.loginAction">
+			<result name="SUCCESS">/ProfilePage.jsp</result>
+			<result name="INPUT">/admin.jsp</result>
+				<result name="ERROR">/loginPage.jsp</result>
+		</action>
+		
+		<action name="mylogout" class="com.lithan.ABCJOB.Action.LogOutAction">
+				<result name="LOGOUT">/loginPage.jsp</result>
+		</action>
+		
+		<action name="myreport" class="com.lithan.ABCJOB.Action.GetReportAction">
+		<result name="SUCCESS">/admin.jsp</result>	
+		</action>
+		
+		<action name="ProfilePage" class="com.lithan.ABCJOB.Action.UserProfile">
+		<result name="SUCCESS">/ProfilePage.jsp</result>	
+		</action>
+		
+		<action name="deletedata" class="com.lithan.ABCJOB.Action.DeleteAction">
+         <result name="SUCCESS">/AdminDeleteProfile.jsp</result>	
+		</action>
+		
+		
+		
+		<action name="userdeletedata" class="com.lithan.ABCJOB.Action.DeleteAction">
+         <result name="SUCCESS">/DeleteProfile.jsp</result>	
+		</action>
+		
+		<action name="updatedetails" class="com.lithan.ABCJOB.Action.UpdateAction">
+			<result name="UPDATE">/AdminUpdate.jsp</result>
+		</action>
+		
+		<action name="Userupdatedetails" class="com.lithan.ABCJOB.Action.UpdateAction">
+			<result name="UPDATE">/UserUpdate.jsp</result>
+		</action>
+		
+		
+		<action name="SAction" class="com.lithan.ABCJOB.Action.SAction">
+			<result name="SUCCESS">/SAction.jsp</result>
+			
+		</action>
+		
+			<action name="find" class="com.lithan.ABCJOB.Action.SearchAction">
+        <result name="SUCCESS">/SearchAction.jsp</result>
+        <result name="ERROR">/SearchAction.jsp</result>
+        </action>
+		
+		
+		
+
+	
+	</package>
+</struts>   
